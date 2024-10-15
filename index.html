@@ -5,12 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="javascript.js" defer></script>
   <link rel="stylesheet" href="style.css">
-  <title>Etch-a-Sketch</title>
+  <title>Le calculator</title>
 </head>
-<body >
-    <div style="text-align: center; margin-bottom: 10px;">
-        <button id="butt" onclick="askForSize()">Play Game!</button>
-    </div>
-    <div id="mainDiv"></div>
+<body>
+  <div id="display">
+    <p id="displayText"></p>
+  </div>
+  <div class="row">
+    <div class="column"><button onclick="addToDisplay(1)">1</button></div>
+    <div class="column"><button onclick="addToDisplay(2)">2</button></div>
+    <div class="column"><button onclick="addToDisplay(3)">3</button></div>
+    <div class="column"><button>+</button></div>
+  </div>
+  <div class="row">
+    <div class="column"><button onclick="addToDisplay(4)">4</button></div>
+    <div class="column"><button onclick="addToDisplay(5)">5</button></div>
+    <div class="column"><button onclick="addToDisplay(6)">6</button></div>
+    <div class="column"><button>-</button></div>
+  </div>
+  <div class="row">
+    <div class="column"><button onclick="addToDisplay(7)">7</button></div>
+    <div class="column"><button onclick="addToDisplay(8)">8</button></div>
+    <div class="column"><button onclick="addToDisplay(9)">9</button></div>
+    <div class="column"><button>*</button></div>
+  </div>
+  <div class="row">
+    <div class="column"><button onclick="clearDisplay()">CE</button></div>
+    <div class="column"><button>0</button></div>
+    <div class="column"><button onclick="operate()">=</button></div>
+    <div class="column"><button>/</button></div>
+  </div>
 </body>
 </html>

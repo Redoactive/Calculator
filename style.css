@@ -1,0 +1,33 @@
+body{
+    margin-top: 5Vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    background-color: white;
+}
+*{
+    outline: 1px solid black;
+}
+div{
+    
+}
+.row{
+    display: flex;
+    height: 8vmax;
+}
+.column{
+    flex: 1;
+}
+button{
+    width: 100%;
+    height: 100%;
+    font-size: 48px;
+}
+#display{
+    background-color: #c4c4c4;
+    border: 5px solid black;
+}
+#displayText{
+    margin: 0%;
+    font-size: 48px;
+    height: 48px;
+}
