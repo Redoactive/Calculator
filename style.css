@@ -2,11 +2,9 @@ body{
     margin-top: 5Vh;
     margin-left: 30vw;
     margin-right: 30vw;
-    background-color: white;
+    background-color: gray;
 }
-*{
-    outline: 1px solid black;
-}
+
 .row{
     display: flex;
     height: 8vmax;
@@ -20,7 +18,7 @@ button{
     font-size: 48px;
 }
 #display{
-    background-color: #c4c4c4;
+    background-color: white;
     border: 5px solid black;
 }
 #displayText{
@@ -28,4 +26,13 @@ button{
     font-size: 48px;
     height: 60px;
     text-align: center;
+}
+.opertator{
+    background-color: rgb(132, 251, 255);
+}
+.special{
+    background-color: aquamarine;
+}
+.numbers{
+    background-color: beige;
 }
