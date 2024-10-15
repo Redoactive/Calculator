@@ -9,7 +9,13 @@
 </head>
 <body>
   <div id="display">
-    <p id="displayText"></p>
+    <p id="displayText">0</p>
+  </div>
+  <div class="row">
+    <div class="column"><button class="opertator" onclick="singleOperator(0)">x^2</button></div>
+    <div class="column"><button class="opertator" onclick="singleOperator(2)">-/+</button></div>
+    <div class="column"><button class="opertator" onclick="singleOperator(1)">√x</button></div>
+    <div class="column"><button class="opertator" onclick="chosenOperator(3)">/</button></div>
   </div>
   <div class="row">
     <div class="column"><button class="numbers" onclick="addToDisplay(1)">1</button></div>
@@ -30,10 +36,10 @@
     <div class="column"><button class="opertator" onclick="chosenOperator(2)">*</button></div>
   </div> 
   <div class="row">
-    <div class="column"><button class="special" onclick="fullyClear()">CE</button></div>
+    <div class="column"><button class="special" onclick="addToDisplay('.')">.</button></div>
     <div class="column"><button class="numbers" onclick="addToDisplay(0)">0</button></div>
+    <div class="column"><button class="special" onclick="fullyClear()">CE</button></div>
     <div class="column"><button class="special" onclick="operate()">=</button></div>
-    <div class="column"><button class="opertator" onclick="chosenOperator(3)">/</button></div>
   </div>
 </body>
 </html>

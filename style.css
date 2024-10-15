@@ -1,13 +1,13 @@
 body{
     margin-top: 5Vh;
-    margin-left: 30vw;
-    margin-right: 30vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     background-color: gray;
 }
 
 .row{
     display: flex;
-    height: 8vmax;
+    height: 7vmax;
 }
 .column{
     flex: 1;
@@ -17,6 +17,7 @@ button{
     height: 100%;
     font-size: 48px;
 }
+
 #display{
     background-color: white;
     border: 5px solid black;
@@ -30,9 +31,18 @@ button{
 .opertator{
     background-color: rgb(132, 251, 255);
 }
+.opertator:active{
+    background-color: rgb(73, 146, 149);
+}
 .special{
     background-color: aquamarine;
 }
+.special:active{
+    background-color: rgb(58, 151, 120);
+}
 .numbers{
     background-color: beige;
+}
+.numbers:active{
+    background-color: rgb(161, 161, 143);
 }

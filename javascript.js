@@ -4,6 +4,7 @@ let operator;
 let firstNumberIsIn = false;
 let outputtedAnswer = false;
 let inputExists = false;
+let possibleToOpertate = false;
 let displayText = "";
 const display = document.querySelector("#displayText");
 
@@ -26,7 +27,7 @@ function divide(first, second){
     return first / second;
 }
 function operate(){
-    if(!inputExists){
+    if(!inputExists || !possibleToOpertate){
         console.log("No input");
         return;
     }
@@ -59,12 +60,20 @@ function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
 function addToDisplay(displayNumber){
-    if(outputtedAnswer){
+    if(outputtedAnswer && displayNumber == "."){
         fullyClear();
         outputtedAnswer = false;
     }
+    if(firstNumberIsIn){
+        possibleToOpertate = true;
+    }
     if(displayText.length >=12){
         return;
+    }
+    if(displayNumber == "."){
+        if (displayText.includes(".")){
+            return;
+        }
     }
     displayText += displayNumber;
     display.textContent = displayText;
@@ -85,11 +94,11 @@ function chosenOperator(number){
 }
 function saveNumbers(){
     if (!firstNumberIsIn){
-        firstNumber = parseInt(displayText);
+        firstNumber = parseFloat(displayText);
         firstNumberIsIn = true;
     }
     else{
-        secondNumber = parseInt(displayText);
+        secondNumber = parseFloat(displayText);
     }
 }
 function fullyClear(){
@@ -153,3 +162,26 @@ document.addEventListener('keydown', function(event) {
             break;
     }
 });
+function singleOperator(index){
+    switch (index) {
+        case 0:
+            let squared = parseFloat(displayText) * parseFloat(displayText);
+            displayText = String(squared);
+            display.textContent = displayText;
+            break;
+        case 1:
+            let root = Math.sqrt(parseFloat(displayText));
+            displayText = String(root);
+            display.textContent = displayText;
+            break;
+        case 2:
+            let opposite = parseFloat(displayText);
+            opposite = -opposite;
+            displayText = String(opposite);
+            display.textContent = displayText;
+
+            break;
+        default:
+            break;
+    }
+}
