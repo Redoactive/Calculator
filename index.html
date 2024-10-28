@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="javascript.js" defer></script>
   <link rel="stylesheet" href="style.css">
-  <title>Le calculator</title>
+  <title>Calculator</title>
 </head>
 <body>
+  <div id="calculator">
   <div id="display">
     <p id="displayText">0</p>
   </div>
@@ -36,10 +37,11 @@
     <div class="column"><button class="opertator" onclick="chosenOperator(2)">*</button></div>
   </div> 
   <div class="row">
-    <div class="column"><button class="special" onclick="addToDisplay('.')">.</button></div>
+    <div class="column"><button class="numbers" onclick="addToDisplay('.')">.</button></div>
     <div class="column"><button class="numbers" onclick="addToDisplay(0)">0</button></div>
-    <div class="column"><button class="special" onclick="fullyClear()">CE</button></div>
+    <div class="column"><button class="numbers" onclick="fullyClear()">CE</button></div>
     <div class="column"><button class="special" onclick="operate()">=</button></div>
+  </div>
   </div>
 </body>
 </html>

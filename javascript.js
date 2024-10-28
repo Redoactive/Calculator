@@ -53,7 +53,8 @@ function operate(){
 function showAnswer(answer){
     
     firstNumber = answer;
-    display.textContent = roundAccurately(answer, 12);
+    displayText = roundAccurately(answer, 12);
+    display.textContent = displayText;
     outputtedAnswer = true;
 }
 function roundAccurately(num, places) {
@@ -163,6 +164,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 function singleOperator(index){
+    if(!inputExists){return}
     switch (index) {
         case 0:
             let squared = parseFloat(displayText) * parseFloat(displayText);

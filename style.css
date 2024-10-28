@@ -1,13 +1,15 @@
 body{
     margin-top: 5Vh;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 0%;
+    margin-right: 0%;
     background-color: gray;
+    display: flex;
+    justify-content: center;
 }
 
 .row{
     display: flex;
-    height: 7vmax;
+    height: max(7vmax, 15Vh);
 }
 .column{
     flex: 1;
@@ -45,4 +47,18 @@ button{
 }
 .numbers:active{
     background-color: rgb(161, 161, 143);
+}
+#calculator{
+    width: 600px;
+    
+}
+@media screen and (max-width: 600px){
+    #calculator{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 400px){
+    body{
+        display: block;
+    }
 }
