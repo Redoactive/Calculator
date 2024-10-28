@@ -1,10 +1,19 @@
+*{
+    
+        font-family: "Rubik Wet Paint", system-ui;
+        font-weight: 400;
+        font-style: normal;
+      color: darkred;
+      
+}
 body{
     margin-top: 5Vh;
     margin-left: 0%;
     margin-right: 0%;
-    background-color: gray;
+    background-color: darkred;
     display: flex;
     justify-content: center;
+ 
 }
 
 .row{
@@ -31,25 +40,28 @@ button{
     text-align: center;
 }
 .opertator{
-    background-color: rgb(132, 251, 255);
+    background-color: rgb(255, 106, 0);
 }
 .opertator:active{
-    background-color: rgb(73, 146, 149);
+    background-color: rgb(116, 0, 0);
 }
 .special{
-    background-color: aquamarine;
+    background-color: yellow;
 }
 .special:active{
-    background-color: rgb(58, 151, 120);
+    background-color: rgb(119, 119, 0);
 }
 .numbers{
-    background-color: beige;
+    background-color: orange;
 }
 .numbers:active{
-    background-color: rgb(161, 161, 143);
+    background-color: rgb(122, 79, 0);
 }
 #calculator{
     width: 600px;
+    padding: 1%;
+    background-color: black;
+    border-radius: 25px;
     
 }
 @media screen and (max-width: 600px){
