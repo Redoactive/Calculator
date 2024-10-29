@@ -31,7 +31,10 @@ function operate(){
         console.log("No input");
         return;
     }
-    saveNumbers();
+    if(!outputtedAnswer){
+        secondNumber = parseFloat(displayText);
+    }
+    console.log(firstNumber + " " + operator + " " + secondNumber)
     let answer;
     if(operator == 0){ // 0+; 1-; 2*; 3/
         answer = add(firstNumber, secondNumber);
@@ -52,8 +55,8 @@ function operate(){
 }
 function showAnswer(answer){
     
-    firstNumber = answer;
     displayText = roundAccurately(answer, 12);
+    firstNumber = answer;
     display.textContent = displayText;
     outputtedAnswer = true;
 }
@@ -85,12 +88,12 @@ function clearDisplay(){
     //display.textContent = displayText;
 }
 function chosenOperator(number){
-    if(inputExists){
+    
         outputtedAnswer = false;
         operator = number;
         saveNumbers();
         clearDisplay();
-    }
+    
         inputExists = false;
 }
 function saveNumbers(){
@@ -185,5 +188,6 @@ function singleOperator(index){
             break;
         default:
             break;
+        outputtedAnswer = false;
     }
 }
